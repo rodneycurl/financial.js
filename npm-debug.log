@@ -1,0 +1,110 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/home/ubuntu/.nvm/versions/node/v4.4.5/bin/node',
+1 verbose cli   '/home/ubuntu/.nvm/versions/node/v4.4.5/bin/npm',
+1 verbose cli   'publish' ]
+2 info using npm@2.15.5
+3 info using node@v4.4.5
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/home/ubuntu/workspace',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /home/ubuntu/.npm/accountantjs/1.0.0/package.tgz not in flight; packing
+9 verbose correctMkdir /home/ubuntu/.npm correctMkdir not in flight; initializing
+10 verbose tar pack [ '/home/ubuntu/.npm/accountantjs/1.0.0/package.tgz',
+10 verbose tar pack   '/home/ubuntu/workspace' ]
+11 verbose tarball /home/ubuntu/.npm/accountantjs/1.0.0/package.tgz
+12 verbose folder /home/ubuntu/workspace
+13 info prepublish accountantjs@1.0.0
+14 verbose addLocalTarball adding from inside cache /home/ubuntu/.npm/accountantjs/1.0.0/package.tgz
+15 verbose correctMkdir /home/ubuntu/.npm correctMkdir not in flight; initializing
+16 silly cache afterAdd accountantjs@1.0.0
+17 verbose afterAdd /home/ubuntu/.npm/accountantjs/1.0.0/package/package.json not in flight; writing
+18 verbose correctMkdir /home/ubuntu/.npm correctMkdir not in flight; initializing
+19 verbose afterAdd /home/ubuntu/.npm/accountantjs/1.0.0/package/package.json written
+20 silly publish { name: 'accountantjs',
+20 silly publish   version: '1.0.0',
+20 silly publish   description: 'A JavaScript library for calculations related to all things money',
+20 silly publish   main: 'accountant.js',
+20 silly publish   scripts: { test: 'mocha --reporter spec' },
+20 silly publish   repository:
+20 silly publish    { type: 'git',
+20 silly publish      url: 'git+https://github.com/Ju66ernaut/accountant.js.git' },
+20 silly publish   keywords: [ 'finance', 'javascript', 'calculator', 'formula', 'accounting' ],
+20 silly publish   author:
+20 silly publish    { name: 'Christopher Diaz',
+20 silly publish      email: 'c_diaz86@hotmail.com',
+20 silly publish      url: 'ju66ernaut.github.io' },
+20 silly publish   license: 'MIT',
+20 silly publish   bugs: { url: 'https://github.com/Ju66ernaut/accountant.js/issues' },
+20 silly publish   homepage: 'https://github.com/Ju66ernaut/accountant.js#readme',
+20 silly publish   devDependencies: { chai: '^3.5.0', mocha: '^3.0.2' },
+20 silly publish   readme: '# Accountant.js\nA JavaScript library for calculations related to all things money\n\n\n### Installation\n\n```shell\n  npm install accountantjs --save\n```\n**or**\n\n- Download or fork the repository from GitHub.\n- Place \'accountant.js\' in your project and include it in your application.\n\n### Example Usage\n\n```js\n  var Accountant = require(\'accountantjs\');\n  var acc = new Accountant();\n  \n  // Calculate Compound Interest\n  // Example: account with a $1500 original balance earns 12%/year\n  // and is compounded monthly (1%/month) for 12 months\n  acc.CompoundInterest(1500, 1, 12);\n  // => 190.24\n```\n\n### Notes\nAccountant.js allows for both decimals and whole number percentages for functions that require \'rate\' parameters\n```js\n  acc.CompoundInterest(1500, 1, 12); // => 190.24\n  acc.CompoundInterest(1500, 0.01, 12); // => 190.24 \n```\nAccountant.js is inspired by Essam Al Joubori\'s finance.js - http://financejs.org/\n',
+20 silly publish   readmeFilename: 'README.md',
+20 silly publish   gitHead: '09a387cc2013e5e3a173ccfcacf4740218e0c3de',
+20 silly publish   _id: 'accountantjs@1.0.0',
+20 silly publish   _shasum: '2387bccae7b5599d4b865f27dbebd5d903ea4206',
+20 silly publish   _from: '.' }
+21 verbose getPublishConfig undefined
+22 silly mapToRegistry name accountantjs
+23 silly mapToRegistry using default registry
+24 silly mapToRegistry registry https://registry.npmjs.org/
+25 silly mapToRegistry data Result {
+25 silly mapToRegistry   raw: 'accountantjs',
+25 silly mapToRegistry   scope: null,
+25 silly mapToRegistry   name: 'accountantjs',
+25 silly mapToRegistry   rawSpec: '',
+25 silly mapToRegistry   spec: 'latest',
+25 silly mapToRegistry   type: 'tag' }
+26 silly mapToRegistry uri https://registry.npmjs.org/accountantjs
+27 verbose publish registryBase https://registry.npmjs.org/
+28 silly publish uploading /home/ubuntu/.npm/accountantjs/1.0.0/package.tgz
+29 verbose request uri https://registry.npmjs.org/accountantjs
+30 verbose request sending authorization for write operation
+31 info attempt registry request try #1 at 8:45:20 PM
+32 verbose request using bearer token for auth
+33 verbose request id e4a5ae1498e183b5
+34 http request PUT https://registry.npmjs.org/accountantjs
+35 http 403 https://registry.npmjs.org/accountantjs
+36 verbose headers { 'content-type': 'application/json',
+36 verbose headers   'cache-control': 'max-age=300',
+36 verbose headers   'content-length': '95',
+36 verbose headers   'accept-ranges': 'bytes',
+36 verbose headers   date: 'Wed, 10 Aug 2016 20:45:21 GMT',
+36 verbose headers   via: '1.1 varnish',
+36 verbose headers   connection: 'keep-alive',
+36 verbose headers   'x-served-by': 'cache-ord1723-ORD',
+36 verbose headers   'x-cache': 'MISS',
+36 verbose headers   'x-cache-hits': '0',
+36 verbose headers   'x-timer': 'S1470861920.830484,VS0,VE1070',
+36 verbose headers   vary: 'Accept-Encoding' }
+37 verbose request invalidating /home/ubuntu/.npm/registry.npmjs.org/accountantjs on PUT
+38 error publish Failed PUT 403
+39 verbose stack Error: "You cannot publish over the previously published version 1.0.0." : accountantjs
+39 verbose stack     at makeError (/home/ubuntu/.nvm/versions/node/v4.4.5/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:264:12)
+39 verbose stack     at CachingRegistryClient.<anonymous> (/home/ubuntu/.nvm/versions/node/v4.4.5/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:252:14)
+39 verbose stack     at Request._callback (/home/ubuntu/.nvm/versions/node/v4.4.5/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:172:14)
+39 verbose stack     at Request.self.callback (/home/ubuntu/.nvm/versions/node/v4.4.5/lib/node_modules/npm/node_modules/request/request.js:200:22)
+39 verbose stack     at emitTwo (events.js:87:13)
+39 verbose stack     at Request.emit (events.js:172:7)
+39 verbose stack     at Request.<anonymous> (/home/ubuntu/.nvm/versions/node/v4.4.5/lib/node_modules/npm/node_modules/request/request.js:1067:10)
+39 verbose stack     at emitOne (events.js:82:20)
+39 verbose stack     at Request.emit (events.js:169:7)
+39 verbose stack     at IncomingMessage.<anonymous> (/home/ubuntu/.nvm/versions/node/v4.4.5/lib/node_modules/npm/node_modules/request/request.js:988:12)
+40 verbose statusCode 403
+41 verbose pkgid accountantjs
+42 verbose cwd /home/ubuntu/workspace
+43 error Linux 4.2.0-c9
+44 error argv "/home/ubuntu/.nvm/versions/node/v4.4.5/bin/node" "/home/ubuntu/.nvm/versions/node/v4.4.5/bin/npm" "publish"
+45 error node v4.4.5
+46 error npm  v2.15.5
+47 error code E403
+48 error "You cannot publish over the previously published version 1.0.0." : accountantjs
+49 error If you need help, you may report this error at:
+49 error     <https://github.com/npm/npm/issues>
+50 verbose exit [ 1, true ]
