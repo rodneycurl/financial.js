@@ -1,5 +1,6 @@
 //Accountant.js
 //https://github.com/Ju66ernaut/accountant.js
+//Accountant.js is inspired by Essam Al Joubori's finance.js - http://financejs.org/
 //Copyright 2016 Christopher Diaz, MIT license
 
 //Instantiate Accountant class
