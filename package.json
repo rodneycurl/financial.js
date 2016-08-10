@@ -4,7 +4,7 @@
   "description": "A JavaScript library for calculations related to all things money",
   "main": "accountant.js",
   "scripts": {
-    "test": "test"
+    "test": "./node_modules/.bin/mocha --reporter spec"
   },
   "repository": {
     "type": "git",
@@ -22,5 +22,9 @@
   "bugs": {
     "url": "https://github.com/Ju66ernaut/accountant.js/issues"
   },
-  "homepage": "https://github.com/Ju66ernaut/accountant.js#readme"
+  "homepage": "https://github.com/Ju66ernaut/accountant.js#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.0.2"
+  }
 }

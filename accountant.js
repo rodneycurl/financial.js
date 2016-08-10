@@ -27,25 +27,26 @@ Accountant.prototype.CompoundInterest = function(principal, ratePerPeriod, numbe
 };
 
 //Loan Payment
-//Description: Calculates payment on a Loan
-Accountant.prototype.LoanPayment = function(presentValue, ratePerPeriod, numberOfPeriods){
-    var rate = checkDecimalPercent(ratePerPeriod);
+//Description: Calculates monthly payment on a Loan
+Accountant.prototype.LoanPayment = function(presentValue, annualInterestRate, numberOfMonths){
+    var rate = checkDecimalPercent(annualInterestRate);
+    var monthlyInterestRate = rate / 12;
 
-    return presentValue * rate / (1 - (Math.pow(1 + rate, -numberOfPeriods)));
+    return presentValue * monthlyInterestRate / (1 - (Math.pow(1 + monthlyInterestRate, -numberOfMonths)));
 };
 
 //Simple Interest
 //Description: Calculates the interest accrued on a loan or savings account that has simple interest
 //time is in years
-Accountant.prototype.SimpleInterest = function(principal, rate, time){
-    var rate = checkDecimalPercent(rate);
+Accountant.prototype.SimpleInterest = function(principal, annualInterestRaterate, time){
+    var rate = checkDecimalPercent(annualInterestRaterate);
 
     return principal * rate * time;
 };
 
 //Debt To Income Ratio
 //Description: Calculates the debt to income ratio 
-Accountant.prototype.DebtToIncome = function(monthlyDebtPayments, monthlyIncome){
+Accountant.prototype.DebtToIncomeRatio = function(monthlyDebtPayments, monthlyIncome){
     return monthlyDebtPayments / monthlyIncome;
 };
 
