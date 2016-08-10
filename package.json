@@ -1,0 +1,26 @@
+{
+  "name": "accountantjs",
+  "version": "1.0.0",
+  "description": "A JavaScript library for calculations related to all things money",
+  "main": "accountant.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ju66ernaut/accountant.js.git"
+  },
+  "keywords": [
+    "finance",
+    "javascript",
+    "calculator",
+    "formula",
+    "accounting"
+  ],
+  "author": "Christopher Diaz <c_diaz86@hotmail.com> (ju66ernaut.github.io)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Ju66ernaut/accountant.js/issues"
+  },
+  "homepage": "https://github.com/Ju66ernaut/accountant.js#readme"
+}
