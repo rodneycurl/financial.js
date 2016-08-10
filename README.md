@@ -31,3 +31,4 @@ Accountant.js allows for both decimals and whole number percentages for function
   acc.CompoundInterest(1500, 1, 12); // => 190.24
   acc.CompoundInterest(1500, 0.01, 12); // => 190.24 
 ```
+Accountant.js is inspired by Essam Al Joubori's finance.js - http://financejs.org/
