@@ -24,3 +24,10 @@ A JavaScript library for calculations related to all things money
   acc.CompoundInterest(1500, 1, 12);
   // => 190.24
 ```
+
+### Notes
+Accountant.js allows for both decimals and whole number percentages for functions that require 'rate' parameters
+```js
+  acc.CompoundInterest(1500, 1, 12); // => 190.24
+  acc.CompoundInterest(1500, 0.01, 12); // => 190.24 
+```
