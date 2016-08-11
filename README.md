@@ -1,5 +1,5 @@
 # Accountant.js
-A JavaScript library for calculations related to all things money
+A JavaScript library for calculations related to all things money 
 
 
 ### Installation
@@ -9,8 +9,10 @@ A JavaScript library for calculations related to all things money
 ```
 **or**
 
-- Download or fork the repository from GitHub.
-- Place 'accountant.js' in your project and include it in your application.
+-   Download or fork the repository from GitHub.
+-   Place 'accountant.js' in your project and include it in your application.
+
+https://ju66ernaut.github.io/accountant.js/
 
 ### Example Usage
 
