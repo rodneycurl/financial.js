@@ -3,9 +3,25 @@
 //Accountant.js is inspired by Essam Al Joubori's finance.js - http://financejs.org/
 //Copyright 2016 Christopher Diaz, MIT license
 
-/** @constructor */
+/**
+* @namespace Accountant
+*/
 var Accountant = {
+    
+    /**
+     * @namespace Util
+     * @memberOf Accountant
+     * @type {object}
+     */
 	Util: {
+        /**
+         * CheckDecimalPercent(number)
+         * Checks if the input value is a whole percent or decimal
+         * @alias Util.CheckDecimalPercent
+         * @memberOf! Util#
+         * @param {number}
+         * @returns {number}
+         */
 		CheckDecimalPercent: function(v){
 			if(v > 0.99){
 				v /= 100;
@@ -27,6 +43,7 @@ var Accountant = {
 * Rate of interest earned when taking into consideration the effect of compounding
 * if an account is compounded monthly, numberOfTimesCompounded would equal 12
 *
+* @memberOf Accountant
 * @param {number} annualInterestRate
 * @param {number} numberOfTimesCompounded (months)
 * @returns {number}
@@ -199,6 +216,18 @@ Accountant.InflationAdjustedReturn = function(investmentReturn, inflationRate){
     var infRate = this.Util.CheckDecimalPercent(inflationRate);
     var invRate = this.Util.CheckDecimalPercent(investmentReturn);
     return 100 * (((1 + invRate) / (1 + infRate)) - 1);
+}
+
+/**
+ * Gains
+ * Calculates Gains or losses in whole percent
+ * 
+ * @param {number} marketPrice
+ * @param {number} purchasePrice
+ * @returns {number}
+ */
+Accountant.Gains = function(marketPrice, purchasePrice){
+	return ((marketPrice - purchasePrice) / purchasePrice) * 100;
 }
 
 

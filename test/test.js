@@ -61,4 +61,8 @@ describe('AccountantJS', function(){
        Accountant.InflationAdjustedReturn(8, 3).should.equal(4.854368932038833)
        Accountant.InflationAdjustedReturn(0.08, 0.03).should.equal(4.854368932038833)
     });
+    
+     it('should calculate the percentage increase in whole percent (gains or losses)', function() {
+       Accountant.Gains(100, 70).should.equal(42.857142857142854);
+    });
 });
