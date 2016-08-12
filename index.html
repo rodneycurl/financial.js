@@ -1,40 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-us">
   <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <meta charset="UTF-8">
     <title>Accountant.js by Ju66ernaut</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
   </head>
-
   <body>
-    <div id="container">
-      <div class="inner">
+    <section class="page-header">
+      <h1 class="project-name">Accountant.js</h1>
+      <h2 class="project-tagline">A JavaScript library for calculations related to all things money</h2>
+      <a href="https://github.com/Ju66ernaut/accountant.js" class="btn">View on GitHub</a>
+      <a href="https://github.com/Ju66ernaut/accountant.js/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/Ju66ernaut/accountant.js/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
 
-        <header>
-          <h1>Accountant.js</h1>
-          <h2>A JavaScript library for calculations related to all things money</h2>
-        </header>
-
-        <section id="downloads" class="clearfix">
-          <a href="https://github.com/Ju66ernaut/accountant.js/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
-          <a href="https://github.com/Ju66ernaut/accountant.js/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
-          <a href="https://github.com/Ju66ernaut/accountant.js" id="view-on-github" class="button"><span>View on GitHub</span></a>
-        </section>
-
-        <hr>
-
-        <section id="main_content">
-          <h1>
+    <section class="main-content">
+      <h1>
 <a id="accountantjs" class="anchor" href="#accountantjs" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Accountant.js</h1>
 
-<p>A JavaScript library for calculations related to all things money</p>
+<p>A JavaScript library for calculations related to all things money - <a href="https://ju66ernaut.github.io/accountant.js/">https://ju66ernaut.github.io/accountant.js/</a></p>
 
 <h3>
 <a id="installation" class="anchor" href="#installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation</h3>
@@ -44,40 +32,39 @@
 <p><strong>or</strong></p>
 
 <ul>
-<li>Download or fork the repository from GitHub.</li>
-<li>Place 'accountant.js' in your project and include it in your application.</li>
+<li>  Download or fork the repository from GitHub.</li>
+<li>  Place 'accountant.js' in your project and include it in your application.</li>
 </ul>
 
 <h3>
 <a id="example-usage" class="anchor" href="#example-usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Example Usage</h3>
 
 <div class="highlight highlight-source-js"><pre>  <span class="pl-k">var</span> Accountant <span class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">'</span>accountantjs<span class="pl-pds">'</span></span>);
-  <span class="pl-k">var</span> acc <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">Accountant</span>();
 
   <span class="pl-c">// Calculate Compound Interest</span>
   <span class="pl-c">// Example: account with a $1500 original balance earns 12%/year</span>
   <span class="pl-c">// and is compounded monthly (1%/month) for 12 months</span>
-  <span class="pl-smi">acc</span>.<span class="pl-en">CompoundInterest</span>(<span class="pl-c1">1500</span>, <span class="pl-c1">1</span>, <span class="pl-c1">12</span>);
+  <span class="pl-smi">Accountant</span>.<span class="pl-en">CompoundInterest</span>(<span class="pl-c1">1500</span>, <span class="pl-c1">1</span>, <span class="pl-c1">12</span>);
   <span class="pl-c">// =&gt; 190.24</span></pre></div>
 
 <h3>
 <a id="notes" class="anchor" href="#notes" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Notes</h3>
 
-<p>Accountant.js allows for both decimals and whole number percentages for functions that require 'rate' parameters</p>
+<p>In most cases, Accountant.js allows for both decimals and whole number percentages for functions that require 'rate' parameters</p>
 
-<div class="highlight highlight-source-js"><pre>  <span class="pl-smi">acc</span>.<span class="pl-en">CompoundInterest</span>(<span class="pl-c1">1500</span>, <span class="pl-c1">1</span>, <span class="pl-c1">12</span>); <span class="pl-c">// =&gt; 190.24</span>
-  <span class="pl-smi">acc</span>.<span class="pl-en">CompoundInterest</span>(<span class="pl-c1">1500</span>, <span class="pl-c1">0.01</span>, <span class="pl-c1">12</span>); <span class="pl-c">// =&gt; 190.24 </span></pre></div>
+<div class="highlight highlight-source-js"><pre>  <span class="pl-smi">Accountant</span>.<span class="pl-en">CompoundInterest</span>(<span class="pl-c1">1500</span>, <span class="pl-c1">1</span>, <span class="pl-c1">12</span>); <span class="pl-c">// =&gt; 190.24</span>
+  <span class="pl-smi">Accountant</span>.<span class="pl-en">CompoundInterest</span>(<span class="pl-c1">1500</span>, <span class="pl-c1">0.01</span>, <span class="pl-c1">12</span>); <span class="pl-c">// =&gt; 190.24 </span></pre></div>
 
 <p>Accountant.js is inspired by Essam Al Joubori's finance.js - <a href="http://financejs.org/">http://financejs.org/</a></p>
-        </section>
 
-        <footer>
-          Accountant.js is maintained by <a href="https://github.com/Ju66ernaut">Ju66ernaut</a><br>
-          This page was generated by <a href="https://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
-        </footer>
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/Ju66ernaut/accountant.js">Accountant.js</a> is maintained by <a href="https://github.com/Ju66ernaut">Ju66ernaut</a>.</span>
 
-        
-      </div>
-    </div>
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
   </body>
 </html>
