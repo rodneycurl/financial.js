@@ -35,4 +35,8 @@ describe('AccountantJS', function(){
        Accountant.Mortgage(350000, 4, 360).should.equal(1670.953534129085);
        Accountant.Mortgage(350000, 0.04, 360).should.equal(1670.953534129085);
     });
+    
+    it('should calculate the future value of the given sum', function(){
+       Accountant.FutureValue(1000, 0.005, 12).should.equal(1061.6778118644977); 
+    });
 });

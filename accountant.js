@@ -6,11 +6,17 @@
 /** @constructor */
 var Accountant = {
 	Util: {
-		checkDecimalPercent: function(v){
+		CheckDecimalPercent: function(v){
 			if(v > 0.99){
 				v /= 100;
 			}
 			return v;
+		},
+		AnnualRateToMonthlyRate: function(v){
+			return v /= 12;
+		},
+		MonthlyRateToAnnualRate: function(v){
+			return v *= 12;
 		}
 	}
 };
@@ -26,7 +32,7 @@ var Accountant = {
 * @returns {number}
 */
 Accountant.AnnualPercentageYield = function (annualInterestRate, numberOfTimesCompounded){
-	var rate = this.Util.checkDecimalPercent(annualInterestRate);
+	var rate = this.Util.CheckDecimalPercent(annualInterestRate);
 	return Math.pow((1 + (rate / numberOfTimesCompounded)), numberOfTimesCompounded) - 1;
 }
 
@@ -41,7 +47,7 @@ Accountant.AnnualPercentageYield = function (annualInterestRate, numberOfTimesCo
 * @returns {number}
 */
 Accountant.CompoundInterest = function(principal, ratePerPeriod, numberOfPeriods){
-	var rate = this.Util.checkDecimalPercent(ratePerPeriod);
+	var rate = this.Util.CheckDecimalPercent(ratePerPeriod);
 	return principal * (Math.pow((1 + rate), numberOfPeriods) - 1);
 }
 
@@ -56,7 +62,7 @@ Accountant.CompoundInterest = function(principal, ratePerPeriod, numberOfPeriods
 * @returns {number}
 */
 Accountant.LoanPayment = function(presentValue, annualInterestRate, numberOfMonths){
-	var rate = this.Util.checkDecimalPercent(annualInterestRate);
+	var rate = this.Util.CheckDecimalPercent(annualInterestRate);
 	var monthlyInterestRate = rate / 12;
 	return presentValue * monthlyInterestRate / (1 - (Math.pow(1 + monthlyInterestRate, -numberOfMonths)));
 }
@@ -73,7 +79,7 @@ Accountant.LoanPayment = function(presentValue, annualInterestRate, numberOfMont
 * @returns {number}
 */
  Accountant.SimpleInterest = function(principal, annualInterestRaterate, time){
-	var rate = this.Util.checkDecimalPercent(annualInterestRaterate);
+	var rate = this.Util.CheckDecimalPercent(annualInterestRaterate);
 	return principal * rate * time;
 }
 
@@ -100,12 +106,28 @@ Accountant.LoanPayment = function(presentValue, annualInterestRate, numberOfMont
 * @returns {number}
 */
  Accountant.Mortgage = function(principal, annualInterestRate, numberOfPeriods){
-	var rate = this.Util.checkDecimalPercent(annualInterestRate);
+	var rate = this.Util.CheckDecimalPercent(annualInterestRate);
 	var monthlyInterestRate = rate / 12;
 	var t = monthlyInterestRate * Math.pow((1 + monthlyInterestRate), numberOfPeriods);
 	var b = Math.pow((1 + monthlyInterestRate), numberOfPeriods) - 1;
 	return principal * (t/b);
 }
+
+
+/**
+* FutureValue(number,number,number)
+* Future Value
+* Calculates Future Value of an amount
+*
+* @param {number} presentValue
+* @param {number} monthlyInterestRate
+* @param {number} numberOfMonths
+* @returns {number}
+*/
+Accountant.FutureValue = function(presentValue, monthlyInterestRate, numberOfMonths){
+	return presentValue * Math.pow((1 + monthlyInterestRate), numberOfMonths);
+}
+
 
 if (typeof exports !== 'undefined') {
   if (typeof module !== 'undefined' && module.exports) {
