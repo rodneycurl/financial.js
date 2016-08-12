@@ -27,7 +27,7 @@ A JavaScript library for calculations related to all things money - https://ju66
 ### Notes
 In most cases, Accountant.js allows for both decimals and whole number percentages for functions that require 'rate' parameters
 ```js
-  acc.CompoundInterest(1500, 1, 12); // => 190.24
-  acc.CompoundInterest(1500, 0.01, 12); // => 190.24 
+  Accountant.CompoundInterest(1500, 1, 12); // => 190.24
+  Accountant.CompoundInterest(1500, 0.01, 12); // => 190.24 
 ```
 Accountant.js is inspired by Essam Al Joubori's finance.js - http://financejs.org/
