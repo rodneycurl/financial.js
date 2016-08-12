@@ -28,7 +28,7 @@ var Accountant = {
 * if an account is compounded monthly, numberOfTimesCompounded would equal 12
 *
 * @param {number} annualInterestRate
-* @param {number} numberOfTimesCompounded
+* @param {number} numberOfTimesCompounded (months)
 * @returns {number}
 */
 Accountant.AnnualPercentageYield = function (annualInterestRate, numberOfTimesCompounded){
@@ -126,6 +126,79 @@ Accountant.LoanPayment = function(presentValue, annualInterestRate, numberOfMont
 */
 Accountant.FutureValue = function(presentValue, monthlyInterestRate, numberOfMonths){
 	return presentValue * Math.pow((1 + monthlyInterestRate), numberOfMonths);
+}
+
+
+
+/**
+* PresentValue(number,number,number)
+* Present Value
+* Calculates Present Value of an amount
+*
+* @param {number} presentValue
+* @param {number} monthlyInterestRate
+* @param {number} numberOfMonths
+* @returns {number}
+*/
+Accountant.PresentValue = function(futureValue, ratePerPeriod, numberOfPeriods){
+    var rate = this.Util.CheckDecimalPercent(ratePerPeriod);
+    
+    return futureValue / Math.pow((1 + rate), numberOfPeriods);
+}
+
+
+/**
+* ReturnOnInvestment(number,number)
+* Return on Investment
+* Calculates Return on Investment
+*
+* @param {number} earnings
+* @param {number} initialInvestment
+* @returns {number}
+*/
+Accountant.ReturnOnInvestment = function(earnings, initialInvestment){
+    return (earnings - initialInvestment) / initialInvestment;
+}
+
+/**
+* RuleOf72(number)
+* Rule of 72
+* Calculates the rule of 72 (years to double money)
+* Use whole number percent for this calculation
+*
+* @param {number} annualInterestRate
+* @returns {number}
+*/
+Accountant.RuleOf72 = function(annualInterestRate){
+    return 72 / annualInterestRate;
+}
+
+/**
+* CashFlow(number, number)
+* Cash Flow
+* Calculates cash flow based on income and expenses
+*
+* @param {number} income
+* @param {number} expenses
+* @returns {number}
+*/
+Accountant.CashFlow = function(income, expenses){
+    return income - expenses
+}
+
+/**
+* InflationAdjustedReturn(number, number)
+* Inflation Adjusted Return
+* Calculates the return of an investment after adjusted for inflation
+*
+* @param {number} investmentReturn
+* @param {number} inflationRate
+* @returns {number}
+*/
+Accountant.InflationAdjustedReturn = function(investmentReturn, inflationRate){
+    var infRate = this.Util.CheckDecimalPercent(inflationRate);
+    var invRate = this.Util.CheckDecimalPercent(investmentReturn);
+    return 100 * (((1 + invRate) / (1 + infRate)) - 1);
 }
 
 

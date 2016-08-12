@@ -39,4 +39,26 @@ describe('AccountantJS', function(){
     it('should calculate the future value of the given sum', function(){
        Accountant.FutureValue(1000, 0.005, 12).should.equal(1061.6778118644977); 
     });
+    
+    it('should calculate present value', function(){
+       Accountant.PresentValue(100, 5, 1).should.equal(95.23809523809524);
+       Accountant.PresentValue(100, 0.05, 1).should.equal(95.23809523809524);
+    });
+    
+    it('should calculate return on investment', function(){
+       Accountant.ReturnOnInvestment(5500, 5000).should.equal(0.1); 
+    });
+    
+    it('should calculate the rule of 72 years', function() {
+       Accountant.RuleOf72(6).should.equal(12);
+    });
+    
+    it('should calculate cash flow', function() {
+       Accountant.CashFlow(8000, 4500).should.equal(3500);
+    });
+    
+    it('should calculate inflation adjust return', function() {
+       Accountant.InflationAdjustedReturn(8, 3).should.equal(4.854368932038833)
+       Accountant.InflationAdjustedReturn(0.08, 0.03).should.equal(4.854368932038833)
+    });
 });
