@@ -1,14 +1,14 @@
 {
-  "name": "accountantjs",
+  "name": "financialjs",
   "version": "1.1.0",
   "description": "A JavaScript library for calculations related to all things money",
-  "main": "accountant.js",
+  "main": "financial.js",
   "scripts": {
     "test": "./node_modules/.bin/mocha --reporter spec"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Ju66ernaut/accountant.js.git"
+    "url": "git+https://github.com/Ju66ernaut/financial.js.git"
   },
   "keywords": [
     "finance",
@@ -20,9 +20,9 @@
   "author": "Christopher Diaz <c_diaz86@hotmail.com> (ju66ernaut.github.io)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Ju66ernaut/accountant.js/issues"
+    "url": "https://github.com/Ju66ernaut/financial.js/issues"
   },
-  "homepage": "https://github.com/Ju66ernaut/accountant.js#readme",
+  "homepage": "https://github.com/Ju66ernaut/financial.js#readme",
   "devDependencies": {
     "chai": "^3.5.0",
     "mocha": "^3.0.2"
