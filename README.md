@@ -1,35 +1,35 @@
-# Accountant.js
-A lightweight financial calculator library - https://ju66ernaut.github.io/accountant.js/
+# Financial.js
+A lightweight financial calculator library - https://ju66ernaut.github.io/financial.js/
 
 
 ### Installation
 
 ```shell
-  npm install accountantjs --save
+  npm install financialjs --save
 ```
 **or**
 
 -   Download or fork the repository from GitHub.
--   Place 'accountant.js' in your project and include it in your application.
+-   Place 'financial.js' in your project and include it in your application.
 
 ### Example Usage
 
 ```js
   
-  var Accountant = require('accountantjs');
+  var Financial = require('financialjs');
   
   // Calculate Compound Interest
   // Example: account with a $1500 original balance earns 12%/year
   // and is compounded monthly (1%/month) for 12 months
-  Accountant.CompoundInterest(1500, 1, 12);
+  Financial.CompoundInterest(1500, 1, 12);
   // => 190.24
 ```
 
 ### Notes
-In most cases, Accountant.js allows for both decimals and whole number percentages for functions that require 'rate' parameters
+In most cases, Financial.js allows for both decimals and whole number percentages for functions that require 'rate' parameters
 ```js
-  Accountant.CompoundInterest(1500, 1, 12); // => 190.24
-  Accountant.CompoundInterest(1500, 0.01, 12); // => 190.24 
+  Financial.CompoundInterest(1500, 1, 12); // => 190.24
+  Financial.CompoundInterest(1500, 0.01, 12); // => 190.24 
 ```
 
-Accountant.js is inspired by Essam Al Joubori's finance.js - http://financejs.org/
+Financial.js is inspired by Essam Al Joubori's finance.js - http://financejs.org/
