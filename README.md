@@ -19,12 +19,12 @@ A lightweight financial calculator library - https://ju66ernaut.github.io/financ
   const Financial = require('financialjs');
 
   // Calculate Mortgage Payment  
-  // Example: A mortgage with a principal balance of 350000 paid over 360 months (30 years) at an interest rate of 4%     
+  // A mortgage with a principal balance of 350000 paid over 360 months (30 years) at an interest rate of 4%     
   Financial.Mortgage(350000, 4, 360); //(principal, annualInterestRate, numberOfPeriods)
   // => 1670.953534129085
   
   // Calculate Compound Interest
-  // Example: An account with a $1500 original balance earns 12%/year and is compounded monthly (1%/month) for 12 months
+  // An account with a $1500 original balance earns 12%/year and is compounded monthly (1%/month) for 12 months
   Financial.CompoundInterest(1500, 1, 12); //(principal, ratePerPeriod, numberOfPeriods)
   // => 190.23754519795466
   
