@@ -76,8 +76,8 @@ Calculates monthly payment on a Loan
 
 **Example**
 ```js
-The monthly payment of a loan with a presentValue (balance) of $15000
-at a 4% annual interest rate over 60 months (5 years)
+The monthly payment of a loan with a presentValue (balance) of $15000 at a 4% annual interest rate over 60 months (5 years)
+
 Financial.LoanPayment(15000, 4, 60)
 // => 276.24783082898847
 ```
@@ -109,6 +109,7 @@ Calculates the debt to income ratio
 **Example**
 ```js
 A monthly income of $8000 and a monthly debt of 2500
+
 Financial.DebtToIncomeRatio(2500, 8000);
 // => 0.3125 (~31%)
 ```
