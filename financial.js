@@ -8,20 +8,20 @@
 */
 var Financial = {
     
-    /**
-     * @namespace Util
-     * @memberOf Financial
-     * @type {object}
-     */
+    // /**
+    //  * @namespace Util
+    //  * @memberOf Financial
+    //  * @type {object}
+    //  */
 	Util: {
-        /**
-         * CheckDecimalPercent(number)
-         * Checks if the input value is a whole percent or decimal
-         * @alias Util.CheckDecimalPercent
-         * @memberOf! Util#
-         * @param {number}
-         * @returns {number}
-         */
+        // /**
+        //  * CheckDecimalPercent(number)
+        //  * Checks if the input value is a whole percent or decimal
+        //  * @alias Util.CheckDecimalPercent
+        //  * @memberOf! Util#
+        //  * @param {number}
+        //  * @returns {number}
+        //  */
 		CheckDecimalPercent: function(v){
 			if(v > 0.99){
 				v /= 100;
@@ -42,7 +42,6 @@ var Financial = {
 * Annual Percentage Yield
 * Rate of interest earned when taking into consideration the effect of compounding
 * if an account is compounded monthly, numberOfTimesCompounded would equal 12
-*
 * @memberOf Financial
 * @param {number} annualInterestRate
 * @param {number} numberOfTimesCompounded (months)
@@ -72,7 +71,10 @@ Financial.CompoundInterest = function(principal, ratePerPeriod, numberOfPeriods)
 * LoanPayment(number,number,number)
 * Loan Payment
 * Calculates monthly payment on a Loan
-*
+* @example The monthly payment of a loan with a presentValue (balance) of $15000 
+at a 4% annual interest rate over 60 months (5 years)
+Financial.LoanPayment(15000, 4, 60)
+// => 276.24783082898847
 * @param {number} presentValue
 * @param {number} annualInterestRate
 * @param {number} numberOfMonths
@@ -104,7 +106,9 @@ Financial.LoanPayment = function(presentValue, annualInterestRate, numberOfMonth
 * DebtToIncomeRatio(number,number)
 * Debt To Income Ratio
 * Calculates the debt to income ratio
-*
+* @example A monthly income of $8000 and a monthly debt of 2500
+Financial.DebtToIncomeRatio(2500, 8000);
+// => 0.3125 (~31%)
 * @param {number} monthlyDebtPayments
 * @param {number} monthlyIncome
 * @returns {number}

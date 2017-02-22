@@ -12,36 +12,16 @@ A lightweight financial calculator library - https://ju66ernaut.github.io/financ
 -   Download or fork the repository from GitHub.
 -   Place 'financial.js' in your project and include it in your application.
 
-### Example Usage
-
-```js
-  
-  const Financial = require('financialjs');
-
-  // Calculate Mortgage Payment  
-  // A mortgage with a principal balance of 350000 paid over 360 months (30 years) at an interest rate of 4%     
-  Financial.Mortgage(350000, 4, 360); //(principal, annualInterestRate, numberOfPeriods)
-  // => 1670.953534129085
-  
-  // Calculate Compound Interest
-  // An account with a $1500 original balance earns 12%/year and is compounded monthly (1%/month) for 12 months
-  Financial.CompoundInterest(1500, 1, 12); //(principal, ratePerPeriod, numberOfPeriods)
-  // => 190.23754519795466
-  
-```
-
 ### Notes
 In most cases, Financial.js allows for both decimal and whole number percentages for functions that require 'rate' parameters
 ```js
+  const Financial = require('financialjs');
+
   Financial.CompoundInterest(1500, 1, 12); // => 190.24
   Financial.CompoundInterest(1500, 0.01, 12); // => 190.24 
 ```
 
-## Financial : <code>object</code>
-**Kind**: global namespace
-
 * [Financial](#Financial) : <code>object</code>
-    * [.Util](#Financial.Util) : <code>object</code>
     * [.AnnualPercentageYield(annualInterestRate, numberOfTimesCompounded)](#Financial.AnnualPercentageYield) ⇒ <code>number</code>
     * [.CompoundInterest(principal, ratePerPeriod, numberOfPeriods)](#Financial.CompoundInterest) ⇒ <code>number</code>
     * [.LoanPayment(presentValue, annualInterestRate, numberOfMonths)](#Financial.LoanPayment) ⇒ <code>number</code>
@@ -56,10 +36,6 @@ In most cases, Financial.js allows for both decimal and whole number percentages
     * [.InflationAdjustedReturn(investmentReturn, inflationRate)](#Financial.InflationAdjustedReturn) ⇒ <code>number</code>
     * [.Gains(marketPrice, purchasePrice)](#Financial.Gains) ⇒ <code>number</code>
 
-<a name="Financial.Util"></a>
-
-### Financial.Util : <code>object</code>
-**Kind**: static namespace of <code>[Financial](#Financial)</code>
 <a name="Financial.AnnualPercentageYield"></a>
 
 ### Financial.AnnualPercentageYield(annualInterestRate, numberOfTimesCompounded) ⇒ <code>number</code>
@@ -98,6 +74,13 @@ Calculates monthly payment on a Loan
 | annualInterestRate | <code>number</code> |
 | numberOfMonths | <code>number</code> |
 
+**Example**
+```js
+The monthly payment of a loan with a presentValue (balance) of $15000
+at a 4% annual interest rate over 60 months (5 years)
+Financial.LoanPayment(15000, 4, 60)
+// => 276.24783082898847
+```
 <a name="Financial.SimpleInterest"></a>
 
 ### Financial.SimpleInterest(principal, annualInterestRaterate, time) ⇒ <code>number</code>
@@ -123,6 +106,12 @@ Calculates the debt to income ratio
 | monthlyDebtPayments | <code>number</code> |
 | monthlyIncome | <code>number</code> |
 
+**Example**
+```js
+A monthly income of $8000 and a monthly debt of 2500
+Financial.DebtToIncomeRatio(2500, 8000);
+// => 0.3125 (~31%)
+```
 <a name="Financial.Mortgage"></a>
 
 ### Financial.Mortgage(principal, annualInterestRate, numberOfPeriods) ⇒ <code>number</code>
@@ -139,8 +128,8 @@ Calculates mortgage payment (number of periods is in months)
 **Example**
 ```js
 A mortgage with a principal balance of 350000 paid over 360 months (30 years) at an interest rate of 4%
-  Financial.Mortgage(350000, 4, 360);
-  // => 1670.953534129085
+Financial.Mortgage(350000, 4, 360);
+// => 1670.953534129085
 ```
 <a name="Financial.FutureValue"></a>
 
@@ -226,6 +215,5 @@ Calculates Gains or losses in whole percent
 | --- | --- |
 | marketPrice | <code>number</code> |
 | purchasePrice | <code>number</code> |
-
 
 Financial.js is inspired by Essam Al Joubori's finance.js - http://financejs.org/
