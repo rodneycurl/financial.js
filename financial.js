@@ -116,10 +116,13 @@ Financial.LoanPayment = function(presentValue, annualInterestRate, numberOfMonth
 /**
 * Mortgage(number,number,number)
 * Mortgage Payment
-* Calculates mortgage payment number of periods is in months
-*
+* Calculates mortgage payment (number of periods is in months)
+* @example A mortgage with a principal balance of 350000 paid over 360 months (30 years) at an interest rate of 4%     
+Financial.Mortgage(350000, 4, 360); 
+// => 1670.953534129085
+* @param {number} principal
 * @param {number} annualInterestRate
-* @param {number} numberOfTimesCompounded
+* @param {number} numberOfPeriods
 * @returns {number}
 */
  Financial.Mortgage = function(principal, annualInterestRate, numberOfPeriods){
