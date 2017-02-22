@@ -1,6 +1,0 @@
-{
-  "name": "Financial.js",
-  "tagline": "A lightweight financial calculator library",
-  "body": "### Installation\r\n\r\n```shell\r\n  npm install financialjs --save\r\n```\r\n**or**\r\n\r\n-   Download or fork the repository from GitHub.\r\n-   Place 'financial.js' in your project and include it in your application.\r\n\r\n### Example Usage\r\n\r\n```js\r\n  \r\n  var Financial = require('financialjs');\r\n  \r\n  // Calculate Compound Interest\r\n  // Example: account with a $1500 original balance earns 12%/year\r\n  // and is compounded monthly (1%/month) for 12 months\r\n  Financial.CompoundInterest(1500, 1, 12);\r\n  // => 190.24\r\n```\r\n\r\n### Notes\r\nIn most cases, Financial.js allows for both decimals and whole number percentages for functions that require 'rate' parameters\r\n```js\r\n  Financial.CompoundInterest(1500, 1, 12); // => 190.24\r\n  Financial.CompoundInterest(1500, 0.01, 12); // => 190.24 \r\n```\r\n\r\nFinancial.js is inspired by Essam Al Joubori's finance.js - http://financejs.org/\r\n",
-  "note": "Don't delete this file! It's used internally to help with page regeneration."
-}
