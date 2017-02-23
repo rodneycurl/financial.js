@@ -71,8 +71,8 @@ Financial.CompoundInterest = function(principal, ratePerPeriod, numberOfPeriods)
 * LoanPayment(number,number,number)
 * Loan Payment
 * Calculates monthly payment on a Loan
-* @example The monthly payment of a loan with a presentValue (balance) of $15000 
-at a 4% annual interest rate over 60 months (5 years)
+* @example The monthly payment of a loan with a presentValue (balance) of $15000 at a 4% annual interest rate over 60 months (5 years)
+
 Financial.LoanPayment(15000, 4, 60)
 // => 276.24783082898847
 * @param {number} presentValue
@@ -107,6 +107,7 @@ Financial.LoanPayment = function(presentValue, annualInterestRate, numberOfMonth
 * Debt To Income Ratio
 * Calculates the debt to income ratio
 * @example A monthly income of $8000 and a monthly debt of 2500
+
 Financial.DebtToIncomeRatio(2500, 8000);
 // => 0.3125 (~31%)
 * @param {number} monthlyDebtPayments
@@ -121,7 +122,8 @@ Financial.DebtToIncomeRatio(2500, 8000);
 * Mortgage(number,number,number)
 * Mortgage Payment
 * Calculates mortgage payment (number of periods is in months)
-* @example A mortgage with a principal balance of 350000 paid over 360 months (30 years) at an interest rate of 4%     
+* @example A mortgage with a principal balance of 350000 paid over 360 months (30 years) at an interest rate of 4%    
+ 
 Financial.Mortgage(350000, 4, 360); 
 // => 1670.953534129085
 * @param {number} principal

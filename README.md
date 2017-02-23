@@ -129,6 +129,7 @@ Calculates mortgage payment (number of periods is in months)
 **Example**
 ```js
 A mortgage with a principal balance of 350000 paid over 360 months (30 years) at an interest rate of 4%
+
 Financial.Mortgage(350000, 4, 360);
 // => 1670.953534129085
 ```
